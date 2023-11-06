@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:hospital_management/infrastructure/navigation/bindings/controllers/auth.controller.binding.dart';
 
 import '../../config.dart';
+import '../../presentation/auth/auth.screen.dart';
 import '../../presentation/screens.dart';
 import 'bindings/controllers/controllers_bindings.dart';
 import 'routes.dart';
@@ -26,6 +28,11 @@ class EnvironmentsBadge extends StatelessWidget {
 
 class Nav {
   static List<GetPage> routes = [
+    GetPage(
+      name: Routes.AUTH,
+      page: () => const AuthScreen(),
+      binding: AuthControllerBinding(),
+    ),
     GetPage(
       name: Routes.HOME,
       page: () => const HomeScreen(),
