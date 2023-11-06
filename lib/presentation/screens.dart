@@ -1,0 +1,1 @@
+export 'package:hospital_management/presentation/home/home.screen.dart';
