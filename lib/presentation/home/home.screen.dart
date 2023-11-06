@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+import 'package:hospital_management/constants/colors.dart';
+import 'package:hospital_management/widgets/side.bar.dart';
 
 import 'controllers/home.controller.dart';
 
@@ -9,16 +11,16 @@ class HomeScreen extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomeScreen'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'HomeScreen is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: SafeArea(
+          child: Row(
+        children: [
+          SideBar(),
+          Expanded(
+              child: Container(
+            color: ColorsTheme.containerColor,
+          ))
+        ],
+      )),
     );
   }
 }
