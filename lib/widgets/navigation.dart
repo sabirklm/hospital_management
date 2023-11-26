@@ -17,75 +17,89 @@ class NevigationTabs extends GetView<HomeController> {
     "Education Content": "assets/logo/education_contents.svg",
     "Medicine Inventory": "assets/logo/medicine_inventory.svg",
     "Settings": "assets/logo/settings.svg",
-    // "Paid Subscriptions": "assets/images/subscription.png",
-    // "User Feedback": "assets/images/feedback.png",
   };
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         InkWell(
-          onTap: () {},
+          onTap: () {
+            controller.selectedIndex.value = 0;
+          },
           child: NavTab(
             iconPath: tabs["Dashboard"]!,
             name: tabs.keys.elementAt(0),
-            selected: false,
+            selected: controller.selectedIndex.value == 0,
           ),
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            controller.selectedIndex.value = 1;
+          },
           child: NavTab(
             iconPath: tabs["Patients"]!,
             name: tabs.keys.elementAt(1),
-            selected: false,
+            selected: controller.selectedIndex.value == 1,
           ),
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            controller.selectedIndex.value = 2;
+          },
           child: NavTab(
             iconPath: tabs["Appointments"]!,
             name: tabs.keys.elementAt(2),
-            selected: false,
+            selected: controller.selectedIndex.value == 2,
           ),
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            controller.selectedIndex.value = 3;
+          },
           child: NavTab(
             iconPath: tabs["Doctors"]!,
             name: tabs.keys.elementAt(3),
-            selected: false,
+            selected: controller.selectedIndex.value == 3,
           ),
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            // controller.selectedIndex.value = 4;
+          },
           child: NavTab(
             iconPath: tabs["Messages"]!,
             name: tabs.keys.elementAt(4),
-            selected: false,
+            selected: controller.selectedIndex.value == 4,
           ),
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            // controller.selectedIndex.value = 5;
+          },
           child: NavTab(
             iconPath: tabs["Education Content"]!,
             name: tabs.keys.elementAt(5),
-            selected: false,
+            selected: controller.selectedIndex.value == 5,
           ),
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            // controller.selectedIndex.value = 6;
+          },
           child: NavTab(
             iconPath: tabs["Medicine Inventory"]!,
             name: tabs.keys.elementAt(6),
-            selected: false,
+            selected: controller.selectedIndex.value == 6,
           ),
         ),
         InkWell(
-          onTap: () {},
+          onTap: () {
+            // controller.selectedIndex.value = 7;
+          },
           child: NavTab(
             iconPath: tabs["Settings"]!,
             name: tabs.keys.elementAt(7),
-            selected: false,
+            selected: controller.selectedIndex.value == 7,
           ),
         )
       ],
