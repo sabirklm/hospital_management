@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
+
 import 'package:hospital_management/infrastructure/navigation/bindings/controllers/auth.controller.binding.dart';
 
 import '../../config.dart';
@@ -37,6 +38,26 @@ class Nav {
       name: Routes.HOME,
       page: () => const HomeScreen(),
       binding: HomeControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.PATIENT,
+      page: () => const PatientScreen(),
+      binding: PatientControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.DASHBOARD,
+      page: () => const DashboardScreen(),
+      binding: DashboardControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.APPOINTMENT,
+      page: () => const AppointmentScreen(),
+      binding: AppointmentControllerBinding(),
+    ),
+    GetPage(
+      name: Routes.DOCTOR,
+      page: () => const DoctorScreen(),
+      binding: DoctorControllerBinding(),
     ),
   ];
 }
